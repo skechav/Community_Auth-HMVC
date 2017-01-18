@@ -1,7 +1,16 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<?php include("head.php") ?>
+		<!---Import Meta--->
+		<?php echo $this->template->meta; ?>
+		
+		<!---Import Styles--->
+		<?php echo $this->template->stylesheet; ?>
+
+		<!---Page Title--->
+		<title><?php echo $this->template->title->default("Default title"); ?></title>
 	</head>
 <body>
 
@@ -21,9 +30,11 @@
                 <a class="navbar-brand" href="index.html">SB Admin</a>
             </div>
             
-			<?php include "topNav.php" ?>
+			<!---Top Navigation Widget--->
+			<?php echo $this->template->widget("top_nav", array('title' => 'Project name')); ?>
            
-			<?php include("sideNav.php") ?>
+			<!---Side Navigation Widget--->
+			<?php echo $this->template->widget("side_nav", array('title' => 'Project name')); ?>
         </nav>
 
         <div id="page-wrapper">
@@ -36,3 +47,26 @@
                         <h1 class="page-header">
                             Dashboard <small>Statistics Overview</small>
                         </h1>
+						
+						<!---Display Page Content--->
+						<?php echo $this->template->content;?>
+						
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Load JS Files -->
+    <?php echo $this->template->javascript; ?>
+
+</body>
+
+</html>
