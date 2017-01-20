@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $autoload['packages'] = array(
-    APPPATH . 'modules/community_auth/'
+   array_keys(Modules::$locations)[0].'community_auth/'
 );
 
 /*

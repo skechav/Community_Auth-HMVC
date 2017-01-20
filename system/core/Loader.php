@@ -1047,7 +1047,7 @@ class CI_Loader {
 			}
 
 			$filepath = $path.'libraries/'.$subdir.$class.'.php';
-
+			
 			// Safety: Was the class already loaded by a previous call?
 			if (class_exists($class, FALSE))
 			{
@@ -1297,12 +1297,12 @@ class CI_Loader {
 		{
 			include(APPPATH.'config/autoload.php');
 		}
-
+		
 		if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/autoload.php'))
 		{
 			include(APPPATH.'config/'.ENVIRONMENT.'/autoload.php');
 		}
-
+		
 		if ( ! isset($autoload))
 		{
 			return;
@@ -1340,7 +1340,7 @@ class CI_Loader {
 		{
 			$this->driver($autoload['drivers']);
 		}
-
+		
 		// Load libraries
 		if (isset($autoload['libraries']) && count($autoload['libraries']) > 0)
 		{
@@ -1350,7 +1350,7 @@ class CI_Loader {
 				$this->database();
 				$autoload['libraries'] = array_diff($autoload['libraries'], array('database'));
 			}
-
+			
 			// Load all other libraries
 			$this->library($autoload['libraries']);
 		}

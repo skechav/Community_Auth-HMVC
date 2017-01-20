@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 function auth_sess_check(){
 
 	$CI =& get_instance();
-
+	
 	// Check if no call to auth verification or requirement methods
 	if( $CI->authentication->post_system_sess_check )
 	{

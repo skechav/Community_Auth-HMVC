@@ -53,7 +53,7 @@
 						
                     </div>
                 </div>
-                <!-- /.row -->
+                <!-- /.row --
 
             </div>
             <!-- /.container-fluid -->

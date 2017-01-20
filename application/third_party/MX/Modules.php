@@ -138,7 +138,8 @@ class Modules
 		{
 			include_once $location;
 			return;
-		}		
+		}	
+	
 	}
 
 	/** Load a module file **/

@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link        http://community-auth.com
  */
 
-require_once APPPATH . 'modules/community_auth/core/MY_Model.php';
+require_once array_keys(Modules::$locations)[0].'community_auth/core/MY_Model.php';
  
 class Auth_model extends MY_Model {
 

@@ -2,7 +2,9 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+
+
+class Welcome extends MX_Controller {
     
     public function index() {
         // Set the title
